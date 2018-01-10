@@ -1,10 +1,9 @@
 <nav>
   <div class="nav-wrapper">
-    <a href="#" class="brand-logo">Logo</a>
-    <ul id="nav-mobile" class="right hide-on-med-and-down">
-      <li><a routerLink='app/admin/users'>Users</a></li>
-      <li><a routerLink='app/sample/sample'>Sample</a></li>
-      <li><a routerLink="collapsible">JavaScript</a></li>
+    <ul id="nav-mobile" class="left hide-on-med-and-down" *ngFor="let item of menu.items">
+      <li>
+          <a routerLink={{item.route}}>{{item.name}}</a>
+      </li>
     </ul>
   </div>
 </nav>

@@ -13,7 +13,9 @@ export class AppNavigationService {
   getMenu() : AppMenu{
 
     return new AppMenu('Menu 1', 'Menu 1', [
-      new AppMenuItem('Dashboard', null, '', '/app/admin')
+      new AppMenuItem('Dashboard', null, '', '/app/admin'),
+      new AppMenuItem('Users', null, '', '/app/admin/users'),
+      new AppMenuItem('Sample', null, '', '/app/sample/sample')
     ]);
   }
 
