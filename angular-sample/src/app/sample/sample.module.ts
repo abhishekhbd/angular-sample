@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { SampleRoutingModule } from './sample-routing.module';
 import { SampleComponent } from './sample/sample.component';
+import { FormGroup, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    SampleRoutingModule
+    SampleRoutingModule, 
+    ReactiveFormsModule
   ],
   declarations: [SampleComponent]
 })

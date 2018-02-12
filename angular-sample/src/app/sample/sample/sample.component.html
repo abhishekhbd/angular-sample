@@ -1,3 +1,16 @@
-<p>
-  sample works!
-</p>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <input type="file" id="avatar" (change)="onFileChange($event)" #fileInput>
+  <!-- <button type="submit" [disabled]="form.invalid || loading" class="btn btn-success">Submit <i class="fa fa-spinner fa-spin fa-fw" *ngIf="loading"></i></button> -->
+  <button type="submit">Submit </button>
+</form>
+
+
+
+<form [formGroup]="form" (ngSubmit)="postDocs()">
+  <div class="form-group">
+    <label for="file">Choose File</label>
+    <input type="file"
+          id="file"
+          (change)="handleFileInput($event.target.files)">
+  </div>
+</form>
