@@ -14,6 +14,17 @@ export class SampleComponent implements OnInit {
     this.createForm();
   }
 
+  identityProof: any=
+  {
+    certicicate:""
+  }
+
+  identityProofArray: any = [{ 'key': 'Passport', 'value': 'Passport' },
+  { 'key': 'AadharCard', 'value': 'AadharCard' },
+  { 'key': 'DrivingLicense', 'value': 'DrivingLicense' },
+  { 'key': 'VoterCard', 'value': 'VoterCard' },
+  { 'key': 'PANCard', 'value': 'PANCard' }];
+
   ngOnInit() {
   }
 
@@ -45,6 +56,7 @@ export class SampleComponent implements OnInit {
   onSubmit() {
     const formModel = this.form.value;
     this.loading = true;
+    alert(this.identityProof.certicicate)
     // this.http.post('apiUrl', formModel)
     setTimeout(() => {
       console.log(formModel);

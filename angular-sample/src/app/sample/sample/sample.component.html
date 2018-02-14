@@ -5,10 +5,14 @@
 </form>
 
 
-
-<form [formGroup]="form" (ngSubmit)="postDocs()">
+<form (ngSubmit)="postDocs()">
   <div class="form-group">
     <label for="file">Choose File</label>
+<mz-select-container>
+    <select mz-select name="certicicate" #certicicate="ngModel" [(ngModel)]="identityProof.certicicate">
+      <option *ngFor="let a of identityProofArray" [ngValue]="a.key">{{a.value}}</option>
+    </select>
+  </mz-select-container>
     <input type="file"
           id="file"
           (change)="handleFileInput($event.target.files)">
