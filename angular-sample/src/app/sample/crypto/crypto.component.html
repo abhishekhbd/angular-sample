@@ -1,0 +1,15 @@
+
+    <form (ngSubmit)="onSubmit()">
+        <input name="firstName"  [(ngModel)]="firstName" #tag3="ngModel" required>
+        {{firstName}}
+
+      <input name="username" [(ngModel)]="usercreds.username" #tag1="ngModel" required>
+      {{usercreds.username}}
+
+
+      <input name="password" [(ngModel)]="usercreds.password" #tag2="ngModel" required>
+      {{usercreds.password}}
+      <button type="submit" click="onSubmit()">submit</button>
+    </form>
+  Encrypted Result: 
+

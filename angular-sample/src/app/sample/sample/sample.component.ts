@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Validators, FormGroup, FormBuilder } from '@angular/forms';
+import { EncryptDecryptService } from '../../shared/service/encrypt-decrypt.service';
 
 @Component({
   selector: 'app-sample',
@@ -10,8 +11,12 @@ export class SampleComponent implements OnInit {
 
   @ViewChild('fileInput') fileInput: ElementRef;
 
+  usercreds = {
+
+  }
+
   constructor(private fb: FormBuilder) { 
-    this.createForm();
+    
   }
 
   identityProof: any=
@@ -26,6 +31,7 @@ export class SampleComponent implements OnInit {
   { 'key': 'PANCard', 'value': 'PANCard' }];
 
   ngOnInit() {
+    console.log();
   }
 
   form: FormGroup;
